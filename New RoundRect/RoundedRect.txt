@@ -1,0 +1,27 @@
+No COMMERICAL USE
+
+   'RoundRectangle (Symmetric) William W.
+   'this roundrect function should work in windows 95 paths (WIN95=true)
+   'all the way to the present pretty darn fast comparable
+   'to the gdi Roundrect Function and its always symmetrical
+   'since it uses one arc of the ellipse for all the corners
+   'also the number of segments
+   'used to draw the corner can be specified
+   'otherwise they are calculated to be fast yet still good quality
+
+   'ONE Important Difference:
+   'While the GDI RoundRect is considered a filled shape
+   'This Roundrect fuction does NOT fill the shape drawn
+   'it only frames/outlines the shape if win95= true
+   'You use Polygon instead of polyline
+   'if you desire filled shapes to be drawn but you lose
+   'windows 95 path compatibility (WIN95=false)
+
+   'SEGMENTS
+   'you can overide this by specifying segments when calling this function
+   'otherwise its calculated
+   'Note if you have too few segments it may make shapes non-symmetric
+   'Remember when specifying segments its only for one corner so segments*4
+   'Segments also can define quality from 0-3 above 3 segments and it defines
+   the number of segments used to draw the figure
+   '0=Low, 1=Med Low, 2=Med, 3= High, 4= 4 segments, 5= 5 segments, 6=......
